@@ -4,8 +4,9 @@ const Header = ({ header }) => {
 
   return (
     <div className="header-section">
-      <h2 className="header-name">{header.name || "name"}</h2>
-      <h3 className="header-title">{header.title || "title"}</h3>
+      <h2 className="header-name">{header.name || "Your name"}</h2>
+      <h3 className="header-title">{header.title || "Your title"}</h3>
+      <hr className="header-divider"></hr>
     </div>
   )
 }

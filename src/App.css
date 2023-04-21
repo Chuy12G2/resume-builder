@@ -2,13 +2,16 @@
   text-align: center;
   margin: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT';
+  display: flex;
+  justify-content: space-around;
 }
 
 .main-form {
-  width: 49%;
+  width: 45%;
   background-color: #A8B4C9;
   display: inline-block;
   border-radius: 20px;
+  margin: 20px;
 }
 
 .main-form--section-title{
@@ -51,6 +54,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   text-align: left;
+  border: 1px solid #3C3F4A;
+  width: 49%;
 }
 
 .top-bar {
@@ -59,9 +64,23 @@
   background-color: #3C3F4A;
 }
 
-.header-section {
-  height: 100px;
-  width: 100%;
+.cv-viewer--subtitle{
+  margin: 10px 20px 10px 0;
+  font-size: 1.2rem;
+}
+
+.paragraph {
+  margin: 6px 0;
+}
+
+.cv-viewer--section-title {
+  display: flex;
+  align-items: center;
+}
+
+.para-exp {
+  display: inline;
+  margin-right: 5%;
 }
 
 .header-name {
@@ -72,43 +91,66 @@
 }
 
 .header-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin: 10px auto;
   font-weight: 300;
+  text-align: center;
 }
 
 .divider {
   border: none;
   height: 3px;
   background-color: #3C3F4A;
+  width: 50px;
+  margin: 0;
+  flex-grow: 2;
 }
+
+.header-divider {
+  border: none;
+  height: 4px;
+  background-color: #3C3F4A;
+  margin: 17px;
+}
+
+.header-section {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
 
 /* About me */
 .aboutme-section {
   width: 65%;
-  background-color: #468C98;
+  box-sizing: border-box;
+  padding: 15px;
 }
 
 /* Contact me */
 .contactme-section {
   width: 35%;
-  background-color: #A8B4C9;
+  box-sizing: border-box;
+  padding: 15px;
 }
 
 /* education */
 .education-section {
   width: 65%;
-  background-color: #476C9B;
+  box-sizing: border-box;
+  padding: 15px;
 }
 
 /* abilities */
 .abilities-section {
   width: 35%;
-  background-color: #984447;
+  box-sizing: border-box;
+  padding: 15px;
 }
 
 /* experience */
 .experience-section {
   width: 100%;
-  background-color: antiquewhite;
+  box-sizing: border-box;
+  padding: 15px;
 }

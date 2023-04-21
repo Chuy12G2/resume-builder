@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <div className='main-form'>
-        <h2 className='main-form--section-title'>Personal Information</h2>
+        <h2 className='main-form--section-title'>Personal Information </h2>
         <HeaderForm header={header} setHeader={setHeader}/>
         <AboutMeForm aboutMe={aboutMe} setAboutMe={setAboutMe}/>
         <ContactMeForm contact={contact} setContact={setContact}/>
@@ -76,16 +76,45 @@ function App() {
       <div className='cv-preview'>
         <div className='top-bar'></div>
         <Header header={header} />
-        <hr className='divider'></hr>
-        <AboutMe
-          aboutMe={aboutMe}/>
-        <hr className='divider'></hr>
-        <ContactMe contact={contact}/>
-        <hr className='divider'></hr>
-        {education.map(e => <Education key={e.id} education={e}/>)}
-        <hr className='divider'></hr>
-        {abilities.map(e => <Abilities key={e.id} abilities={e}/>)}
-        {experience.map(e => <Experience key={e.id} experience={e}/>)}
+        <div className="aboutme-section">
+          <div className='cv-viewer--section-title'>
+            <h4 className="cv-viewer--subtitle">About Me</h4>
+            <hr className='divider'></hr>
+          </div>
+          <AboutMe aboutMe={aboutMe}/>  
+        </div>
+        
+        <div className="contactme-section">
+          <div className='cv-viewer--section-title'>
+            <h4 className="cv-viewer--subtitle">Contact Me</h4>
+            <hr className='divider'></hr>
+          </div>
+          <ContactMe contact={contact}/>
+        </div>
+
+        <div className="education-section">
+          <div className='cv-viewer--section-title'>
+            <h4 className='cv-viewer--subtitle'>Education</h4>
+            <hr className='divider'></hr>
+          </div>
+          {education.map(e => <Education key={e.id} education={e}/>)}
+        </div>
+
+        <div className="abilities-section">
+          <div className='cv-viewer--section-title'>
+            <h4 className='cv-viewer--subtitle'>Abilities</h4>
+            <hr className='divider'></hr>
+          </div>
+          {abilities.map(e => <Abilities key={e.id} abilities={e}/>)}
+        </div>
+
+        <div className="experience-section">
+          <div className='cv-viewer--section-title'>
+            <h4 className='cv-viewer--subtitle'>Experience</h4>
+            <hr className='divider'></hr>
+          </div>
+          {experience.map(e => <Experience key={e.id} experience={e}/>)}
+        </div>
       </div>
     </div>
   )
